@@ -343,7 +343,8 @@ html.dark .site-header {
   position: absolute;
   top: calc(100% + 0.5rem);
   left: 0;
-  min-width: 200px;
+  min-width: 310px;
+  width: max-content;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 12px;
@@ -372,27 +373,52 @@ html.dark .dropdown-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.625rem 0.875rem;
+  gap: 1.25rem;
+  padding: 0.65rem 0.95rem;
   border-radius: 8px;
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--color-text-main);
   text-decoration: none;
+  white-space: nowrap;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover,
+.dropdown-item.active {
   background-color: var(--color-primary-light);
   color: var(--color-primary);
+  font-weight: 600;
+}
+
+html.dark .dropdown-item:hover,
+html.dark .dropdown-item.active {
+  background-color: #162514;
+  color: #8CC47E;
 }
 
 .dropdown-badge {
   font-size: 0.6875rem;
-  padding: 0.15rem 0.45rem;
+  padding: 0.2rem 0.55rem;
   border-radius: 9999px;
   background-color: var(--color-surface-soft);
   color: var(--color-accent-sage);
   font-weight: 600;
+  flex-shrink: 0;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.dropdown-item:hover .dropdown-badge,
+.dropdown-item.active .dropdown-badge {
+  background-color: rgba(45, 90, 39, 0.12);
+  color: var(--color-primary);
+}
+
+html.dark .dropdown-item:hover .dropdown-badge,
+html.dark .dropdown-item.active .dropdown-badge {
+  background-color: rgba(140, 196, 126, 0.18);
+  color: #8CC47E;
 }
 
 /* Header Action Controls */
@@ -948,6 +974,49 @@ html.dark .site-footer {
   color: var(--color-text-muted);
   margin-top: 1rem;
   max-width: 380px;
+}
+
+/* Footer Social Icons Row (Matching Reference Layout) */
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.footer-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text-main);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-social-btn:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 90, 39, 0.25);
+}
+
+html.dark .footer-social-btn {
+  background-color: #121212;
+  border-color: #2A2A2A;
+  color: #D8E2D5;
+}
+
+html.dark .footer-social-btn:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(45, 90, 39, 0.4);
 }
 
 .footer-heading {
