@@ -1,0 +1,92 @@
+/* ==========================================================================
+   HERBAL SOAP MAKING STUDIO — RESPONSIVE STYLESHEET
+   Breakpoints tested: 320, 375, 425, 768, 820, 1024, 1280, 1440, 1536, 1920+
+   ========================================================================== */
+
+/* Shared container padding rules are unified in style.css */
+
+/* Compact header responsive behavior */
+@media (max-width: 1079px) {
+  .site-header {
+    height: 64px;
+  }
+  
+  :root {
+    --header-height: 64px;
+  }
+
+  body {
+    padding-top: 64px;
+  }
+
+  .brand-logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-title {
+    font-size: 1.1rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.625rem;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .header-actions .btn-cta,
+  .header-actions .btn-login,
+  .header-actions .btn-icon-control {
+    display: none;
+  }
+
+  .mobile-toggle-btn {
+    display: inline-flex !important;
+  }
+}
+
+/* Extra small screens (iPhone SE, 320px - 375px) */
+@media (max-width: 375px) {
+  .brand-title {
+    font-size: 1rem;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .mobile-drawer {
+    width: 92%;
+  }
+
+  .footer-inner {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Tablet adjustments handled in style.css (2x2 grid for 640px - 1079px) */
+
+/* Ultra-wide screens (1920px+) */
+@media (min-width: 1920px) {
+  .container-custom,
+  .header-inner,
+  .footer-inner {
+    max-width: 90rem;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

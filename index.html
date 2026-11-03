@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herbal Soap Making Studio — Artisanal Botanical Skincare & Workshops</title>
+  <meta name="description"
+    content="Handcrafted organic cold-process herbal soaps, raw botanical infusions, and interactive artisan soapmaking workshops.">
+  <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              olive: '#2D5A27',
+              oliveHover: '#22451E',
+              sage: '#568744',
+              lavender: '#7C5C99',
+              amber: '#D9822B',
+              cream: '#FAF7F2',
+              darkPitch: '#000000'
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- External Stylesheets ONLY (No inline styles) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="bg-[#FAF7F2] dark:bg-[#000000] text-[#1C241B] dark:text-[#FFFFFF] antialiased">
+
+  <!-- ========================================================================
+       GLOBAL: BRANDED PAGE LOADER
+       ======================================================================== -->
+  <div id="page-loader" aria-label="Loading Herbal Soap Making Studio">
+    <div class="loader-logo-ring">
+      <img src="assets/images/logo/logo.png" alt="Herbal Soap Making Studio Logo" class="loader-logo-img">
+    </div>
+    <p class="mt-4 font-serif text-lg tracking-wider text-[#2D5A27] dark:text-[#5A9950] font-semibold">
+      Herbal Soap Making Studio
+    </p>
+  </div>
+
+  <!-- ========================================================================
+       GLOBAL: FIXED COMPACT HEADER
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <!-- Brand Logo + Name -->
+      <a href="index.html" class="brand-link" aria-label="Herbal Soap Making Studio Home">
+        <img src="assets/images/logo/logo.png" alt="Herbal Soap Making Studio Logo" class="brand-logo-img">
+        <div class="brand-text-block">
+          <span class="brand-title">Herbal Studio</span>
+          <span class="brand-subtitle">Artisanal Botanical</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation: Exactly 6 Navigation Items (Single Line) -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <!-- 1. Home with Click-Only Dropdown (Active on Home 1) -->
+        <div class="dropdown-wrapper">
+          <button type="button" class="dropdown-trigger active" id="home-dropdown-trigger" aria-haspopup="true"
+            aria-expanded="false" aria-controls="home-dropdown-menu">
+            <span>Home</span>
+            <svg class="dropdown-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="dropdown-menu" id="home-dropdown-menu" role="menu">
+            <a href="index.html" class="dropdown-item active" role="menuitem">
+              <span>Home 1 — Studio & Botanical</span>
+              <span class="dropdown-badge">Default</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span>Home 2 — Apothecary & Craft</span>
+              <span class="dropdown-badge">Artisan</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Products -->
+        <a href="products.html" class="nav-link">Products</a>
+
+        <!-- 3. Workshops -->
+        <a href="workshops.html" class="nav-link">Workshops</a>
+
+        <!-- 4. About (Mandatory) -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 6. Contact -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop Header Controls: RTL + Dark Mode (#000000) + CTA Button -->
+      <div class="header-actions">
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="btn-icon-control rtl-toggle-btn" aria-label="Toggle Text Direction (RTL / LTR)"
+          title="Toggle RTL / LTR">
+          <span class="rtl-status-label font-bold text-xs">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button type="button" class="btn-icon-control theme-toggle-btn" aria-label="Toggle Dark Mode (#000000)"
+          title="Toggle Dark Mode">
+          <svg class="w-5 h-5 theme-icon-state" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <!-- Primary CTA Button (Book Workshop) -->
+        <a href="workshops.html" class="btn-cta" aria-label="Book a Studio Workshop">
+          <span>Book Workshop</span>
+          <svg class="w-4 h-4 flip-in-rtl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Hamburger Trigger -->
+        <button type="button" class="mobile-toggle-btn" id="mobile-menu-open" aria-label="Open mobile navigation menu"
+          aria-expanded="false" aria-controls="mobile-drawer">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       GLOBAL: MOBILE NAVIGATION DRAWER & ACCORDION
+       ======================================================================== -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay" aria-hidden="true"></div>
+
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-brand-box">
+        <img src="assets/images/logo/logo.png" alt="Herbal Soap Making Studio Logo"
+          class="w-10 h-10 object-contain rounded-full">
+        <div class="flex flex-col">
+          <span class="font-serif font-bold text-base text-[#1C241B] dark:text-[#FFFFFF] leading-tight">Herbal
+            Studio</span>
+          <span class="text-[10px] font-semibold tracking-wider text-[#568744] uppercase">Artisanal Botanical</span>
+        </div>
+      </div>
+      <button type="button" class="btn-icon-control" id="mobile-menu-close" aria-label="Close mobile menu">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li>
+          <button type="button" class="mobile-accordion-btn active" id="mobile-home-accordion-btn" aria-expanded="false">
+            <span>Home</span>
+            <svg class="w-4 h-4 accordion-chevron transition-transform duration-200" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-content" id="mobile-home-accordion-content">
+            <a href="index.html" class="mobile-sub-link mobile-close-target active">Home 1 — Studio & Botanical</a>
+            <a href="home-2.html" class="mobile-sub-link mobile-close-target">Home 2 — Apothecary & Craft</a>
+          </div>
+        </li>
+        <li><a href="products.html" class="mobile-nav-link mobile-close-target">Products</a></li>
+        <li><a href="workshops.html" class="mobile-nav-link mobile-close-target">Workshops</a></li>
+        <li><a href="about.html" class="mobile-nav-link mobile-close-target">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link mobile-close-target">Contact</a></li>
+      </ul>
+
+      <div class="mobile-controls-row">
+        <button type="button" class="mobile-control-badge-btn rtl-toggle-btn" aria-label="Toggle RTL/LTR">
+          <span><strong class="rtl-status-label">RTL</strong> Mode</span>
+        </button>
+
+        <button type="button" class="mobile-control-badge-btn theme-toggle-btn" aria-label="Toggle Dark Mode (#000000)">
+          <svg class="w-4 h-4 shrink-0 theme-icon-state" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+
+      <!-- Mobile CTA Button -->
+      <a href="workshops.html" class="btn-cta mobile-close-target w-full justify-center py-3 text-center"
+        aria-label="Book a Studio Workshop">
+        <span>Book a Studio Workshop</span>
+        <svg class="w-4 h-4 flip-in-rtl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       GLOBAL: LOGIN & REGISTRATION MODAL
+       ======================================================================== -->
+  <div class="modal-overlay" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div class="text-center mb-6">
+        <img src="assets/images/logo/logo.png" alt="Herbal Soap Logo"
+          class="w-14 h-14 mx-auto mb-2 object-contain rounded-full shadow-md">
+        <h2 id="modal-heading" class="font-serif text-2xl font-bold text-[#1C241B] dark:text-[#FFFFFF]">Studio Portal
+        </h2>
+        <p class="text-xs text-[#536252] dark:text-[#A3B19F]">Access your workshop registrations and bespoke soap orders
+        </p>
+      </div>
+
+      <div class="modal-tabs" role="tablist">
+        <button type="button" class="modal-tab-btn active" data-tab="signin" role="tab">Sign In</button>
+        <button type="button" class="modal-tab-btn" data-tab="signup" role="tab">Register Account</button>
+      </div>
+
+      <form id="form-signin">
+        <div class="form-group">
+          <label class="form-label" for="signin-email">Email Address</label>
+          <input type="email" id="signin-email" class="form-input" placeholder="botanist@herbalstudio.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="signin-password">Password</label>
+          <input type="password" id="signin-password" class="form-input" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-form-submit">Enter Studio Account</button>
+      </form>
+
+      <form id="form-signup" class="hidden">
+        <div class="form-group">
+          <label class="form-label" for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" class="form-input" placeholder="Clara Vance" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="signup-email">Email Address</label>
+          <input type="email" id="signup-email" class="form-input" placeholder="clara@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="signup-password">Create Password</label>
+          <input type="password" id="signup-password" class="form-input" placeholder="Minimum 8 characters" required>
+        </div>
+        <button type="submit" class="btn-form-submit">Create Studio Account</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ########################################################################
+       HOME 1: EXACTLY 6 MAIN CONTENT SECTIONS
+       ######################################################################## -->
+  <main id="main-content">
+
+    <!-- ======================================================================
+         SECTION 1: HERO SECTION (Full Viewport Height)
+         ====================================================================== -->
+    <section
+      class="hero-full-viewport py-12 md:py-16 bg-gradient-to-b from-[#FAF7F2] to-[#F4EFE6] dark:from-[#000000] dark:to-[#0A0A0A] border-b border-[#E6DED2] dark:border-[#222222]">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+          <!-- Text Content (Concise, High Contrast) -->
+          <div class="lg:col-span-7 flex flex-col items-start">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#EBF3E8] dark:bg-[#162514] border border-[#2D5A27]/20 dark:border-[#5A9950]/30 mb-6">
+              <span class="w-2 h-2 rounded-full bg-[#2D5A27] dark:bg-[#5A9950] animate-pulse"></span>
+              <span class="text-xs font-semibold text-[#2D5A27] dark:text-[#7EB569] uppercase tracking-wider">
+                Artisanal Cold-Process Soap Studio
+              </span>
+            </div>
+
+            <h1
+              class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#1C241B] dark:text-[#FFFFFF] leading-[1.1] mb-6">
+              Handcrafted Botanical Soaps, Cured by Nature.
+            </h1>
+
+            <p
+              class="text-base sm:text-lg text-[#384636] dark:text-[#D8E2D5] font-normal leading-relaxed max-w-2xl mb-8">
+              Small-batch herbal bars cold-infused with wild mountain herbs, raw plant oils, and pure floral essences.
+              Aged 6 full weeks for gentle, skin-restoring lather.
+            </p>
+
+            <!-- Dual Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-10">
+              <a href="#collections" class="btn-login py-3 px-7 text-sm font-semibold shadow-md">
+                <span>Explore Soap Collections</span>
+                <svg class="w-4 h-4 flip-in-rtl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+
+              <a href="workshops.html"
+                class="inline-flex items-center gap-2 py-3 px-6 text-sm font-semibold rounded-full border border-[#2D5A27] dark:border-[#5A9950] text-[#2D5A27] dark:text-[#7EB569] bg-white dark:bg-[#0A0A0A] hover:bg-[#EBF3E8] dark:hover:bg-[#162514] transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span>Book a Workshop</span>
+              </a>
+            </div>
+
+            <!-- 3 Core Botanical Badges -->
+            <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-6 border-t border-[#E6DED2] dark:border-[#242424] w-full">
+              <div>
+                <p class="font-serif text-2xl sm:text-3xl font-bold text-[#2D5A27] dark:text-[#5A9950]">42 Days</p>
+                <p class="text-xs sm:text-sm font-medium text-[#384636] dark:text-[#D8E2D5]">Cold-Rack Curing</p>
+              </div>
+              <div>
+                <p class="font-serif text-2xl sm:text-3xl font-bold text-[#7C5C99] dark:text-[#A583C6]">100%</p>
+                <p class="text-xs sm:text-sm font-medium text-[#384636] dark:text-[#D8E2D5]">Plant-Based Herbs</p>
+              </div>
+              <div>
+                <p class="font-serif text-2xl sm:text-3xl font-bold text-[#D9822B] dark:text-[#F0A54E]">0%</p>
+                <p class="text-xs sm:text-sm font-medium text-[#384636] dark:text-[#D8E2D5]">Synthetic Chemicals</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image Showcase with Layered Badge -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <div class="img-zoom-wrapper shadow-2xl border border-[#E6DED2] dark:border-[#282828]">
+                <img src="assets/images/hero/p1.jpg" alt="Artisanal Handcrafted Herbal Soap Bars"
+                  class="img-zoom-target w-full h-[400px] sm:h-[480px] object-cover">
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: BOTANICAL INGREDIENTS MOSAIC (Raw Plant Alchemy Showcase)
+         ====================================================================== -->
+    <section class="py-16 md:py-24 bg-white dark:bg-[#000000] border-b border-[#E6DED2] dark:border-[#222222]">
+      <div class="container-custom">
+        <!-- Section Header -->
+        <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
+          <span class="text-xs font-bold text-[#568744] dark:text-[#7EB569] uppercase tracking-widest block mb-2">
+            Apothecary Ingredients
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#1C241B] dark:text-[#FFFFFF] mb-3">
+            Pure Botanical Harvest, Zero Compromise
+          </h2>
+          <p class="text-sm sm:text-base text-[#384636] dark:text-[#D8E2D5]">
+            Every herbal soap bar starts in nature. We source single-origin herbs, mineral clays, and extra-virgin
+            cold-pressed plant oils.
+          </p>
+        </div>
+
+        <!-- Mosaic Grid (4 Visual Columns) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Ingredient 1 -->
+          <div class="card-even-item overflow-hidden group">
+            <div>
+              <div class="relative h-48 overflow-hidden">
+                <img src="assets/images/sections/p2.jpg" alt="Wild Mountain Lavender"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <span
+                  class="absolute top-3 left-3 text-[11px] px-2.5 py-1 rounded-full bg-white/90 dark:bg-black/90 text-[#2D5A27] dark:text-[#7EB569] font-bold backdrop-blur-sm shadow-sm">
+                  Calming
+                </span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1C241B] dark:text-[#FFFFFF] mb-2 leading-tight">
+                  Highland Lavender
+                </h3>
+                <p class="text-xs text-[#384636] dark:text-[#D8E2D5] leading-relaxed">
+                  Steam-distilled flowers soothe redness and relax tense skin tissue during gentle washing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ingredient 2 -->
+          <div class="card-even-item overflow-hidden group">
+            <div>
+              <div class="relative h-48 overflow-hidden">
+                <img src="assets/images/sections/p3.jpg" alt="Cold-Pressed Extra Virgin Olive & Castor Oil"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <span
+                  class="absolute top-3 left-3 text-[11px] px-2.5 py-1 rounded-full bg-white/90 dark:bg-black/90 text-[#D9822B] dark:text-[#F0A54E] font-bold backdrop-blur-sm shadow-sm">
+                  Nourishing
+                </span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1C241B] dark:text-[#FFFFFF] mb-2 leading-tight">
+                  Cold-Pressed Oils
+                </h3>
+                <p class="text-xs text-[#384636] dark:text-[#D8E2D5] leading-relaxed">
+                  Extra-virgin olive, golden jojoba, and castor oil create an ultra-rich, creamy conditioning lather.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ingredient 3 -->
+          <div class="card-even-item overflow-hidden group">
+            <div>
+              <div class="relative h-48 overflow-hidden">
+                <img src="assets/images/sections/p4.jpg" alt="Organic Chamomile Blossoms"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <span
+                  class="absolute top-3 left-3 text-[11px] px-2.5 py-1 rounded-full bg-white/90 dark:bg-black/90 text-[#2D5A27] dark:text-[#7EB569] font-bold backdrop-blur-sm shadow-sm">
+                  Sensitive
+                </span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1C241B] dark:text-[#FFFFFF] mb-2 leading-tight">
+                  Chamomile Blossom
+                </h3>
+                <p class="text-xs text-[#384636] dark:text-[#D8E2D5] leading-relaxed">
+                  Solar-infused organic blossoms shield fragile skin barriers against daily ecological stress.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ingredient 4 -->
+          <div class="card-even-item overflow-hidden group">
+            <div>
+              <div class="relative h-48 overflow-hidden">
+                <img src="assets/images/products/p5.jpg" alt="Activated Charcoal and Mineral Clay"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <span
+                  class="absolute top-3 left-3 text-[11px] px-2.5 py-1 rounded-full bg-white/90 dark:bg-black/90 text-[#7C5C99] dark:text-[#A583C6] font-bold backdrop-blur-sm shadow-sm">
+                  Clarifying
+                </span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1C241B] dark:text-[#FFFFFF] mb-2 leading-tight">
+                  Activated Bamboo
+                </h3>
+                <p class="text-xs text-[#384636] dark:text-[#D8E2D5] leading-relaxed">
+                  Micro-porous steam-activated carbon magnetically draws out impurities without stripping natural oils.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: SIGNATURE HERBAL SOAP COLLECTIONS (Even Product Cards)
+         ====================================================================== -->
+    <section id="collections"
+      class="pt-16 pb-24 md:pt-24 md:pb-32 bg-[#FAF7F2] dark:bg-[#0A0A0A] border-b border-[#E6DED2] dark:border-[#222222]">
+      <div class="container-custom">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <span class="text-xs font-bold text-[#568744] dark:text-[#7EB569] uppercase tracking-widest block mb-2">
+              Small Batch Releases
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#1C241B] dark:text-[#FFFFFF]">
+              Signature Herbal Soap Bars
+            </h2>
+          </div>
+          <a href="products.html"
+            class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2D5A27] dark:text-[#7EB569] hover:underline">
+            <span>View All Botanical Batches</span>
+            <svg class="w-4 h-4 flip-in-rtl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- 4 Even Height Product Cards -->
+        <div class="card-even-grid">
+
+          <!-- Card 1 -->
+          <div class="card-even-item">
+            <div>
+              <div class="relative overflow-hidden aspect-[4/3]">
+                <img src="assets/images/products/p6.jpg" alt="Lavender & Oat Soothing Soap Bar"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-bold rounded-full bg-white/90 dark:bg-black/90 text-[#2D5A27] dark:text-[#7EB569] backdrop-blur-sm shadow-sm">
+                  Dry & Sensitive
+                </span>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-1 text-[#D9822B] mb-2">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span class="text-xs font-bold text-[#1C241B] dark:text-[#FFFFFF]">4.9 (84 reviews)</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-[#1C241B] dark:text-[#FFFFFF] mb-1">
+                  Lavender & Oat Bar
+                </h3>
+                <p class="text-xs text-[#384636] dark:text-[#D8E2D5] line-clamp-2">
+                  Organic colloidal oats combined with fresh lavender oil for restorative cleansing.
+                </p>
+              </div>
+            </div>
+            <div
+              class="px-5 py-4 flex items-center justify-between border-t border-[#E6DED2] dark:border-[#222222] mt-auto bg-[#F7F3EB]/40 dark:bg-[#111111]/60">
+              <span class="font-serif text-xl font-bold text-[#2D5A27] dark:text-[#7EB569]">$14.00</span>
+              <button type="button" class="btn-login btn-add-bag py-1.5 px-3.5 text-xs font-semibold"
+                data-soap="Lavender & Oat Bar">
+                Add to Bag
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card-even-item">
+            <div>
+              <div class="relative overflow-hidden aspect-[4/3]">
+                <img src="assets/images/products/p7.jpg" alt="Rosemary Mint Purifying Soap Bar"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-bold rounded-full bg-white/90 dark:bg-black/90 text-[#2D5A27] dark:text-[#7EB569] backdrop-blur-sm shadow-sm">
+                  Clarifying & Oily
+                </span>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-1 text-[#D9822B] mb-2">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span class="text-xs font-bold text-[#1C241B] dark:text-[#FFFFFF]">4.8 (62 reviews)</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-[#1C241B] dark:text-[#FFFFFF] mb-1">
+                  Rosemary Mint Detox
+                </h3>
+                <p class="text-xs text-[#384636] dark:text-[#D8E2D5] line-clamp-2">
+                  Invigorating garden peppermint and fresh rosemary leaves for clear, energized pores.
+                </p>
+              </div>
+            </div>
+            <div
+              class="px-5 py-4 flex items-center justify-between border-t border-[#E6DED2] dark:border-[#222222] mt-auto bg-[#F7F3EB]/40 dark:bg-[#111111]/60">
+              <span class="font-serif text-xl font-bold text-[#2D5A27] dark:text-[#7EB569]">$15.00</span>
+              <button type="button" class="btn-login btn-add-bag py-1.5 px-3.5 text-xs font-semibold"
+                data-soap="Rosemary Mint Detox">
+                Add to Bag
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card-even-item">
+            <div>
+              <div class="relative overflow-hidden aspect-[4/3]">
+                <img src="assets/images/products/p8.jpg" alt="Chamomile Calendula Gentle Soap Bar"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-bold rounded-full bg-white/90 dark:bg-black/90 text-[#2D5A27] dark:text-[#7EB569] backdrop-blur-sm shadow-sm">
+                  Baby & Facial Care
+                </span>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-1 text-[#D9822B] mb-2">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span class="text-xs font-bold text-[#1C241B] dark:text-[#FFFFFF]">5.0 (98 reviews)</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-[#1C241B] dark:text-[#FFFFFF] mb-1">
+                  Chamomile Sunshine
+                </h3>
+                <p class="text-xs text-[#384636] dark:text-[#D8E2D5] line-clamp-2">
+                  Solar calendula and pure chamomile infusion for delicate, eczema-prone skin.
+                </p>
+              </div>
+            </div>
+            <div
+              class="px-5 py-4 flex items-center justify-between border-t border-[#E6DED2] dark:border-[#222222] mt-auto bg-[#F7F3EB]/40 dark:bg-[#111111]/60">
+              <span class="font-serif text-xl font-bold text-[#2D5A27] dark:text-[#7EB569]">$14.50</span>
+              <button type="button" class="btn-login btn-add-bag py-1.5 px-3.5 text-xs font-semibold"
+                data-soap="Chamomile Sunshine">
+                Add to Bag
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card-even-item">
+            <div>
+              <div class="relative overflow-hidden aspect-[4/3]">
+                <img src="assets/images/products/p9.jpg" alt="Cedarwood Charcoal Deep Purifying Soap"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-bold rounded-full bg-white/90 dark:bg-black/90 text-[#2D5A27] dark:text-[#7EB569] backdrop-blur-sm shadow-sm">
+                  Deep Pore Cleansing
+                </span>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-1 text-[#D9822B] mb-2">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span class="text-xs font-bold text-[#1C241B] dark:text-[#FFFFFF]">4.9 (110 reviews)</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-[#1C241B] dark:text-[#FFFFFF] mb-1">
+                  Cedar Charcoal Bar
+                </h3>
+                <p class="text-xs text-[#384636] dark:text-[#D8E2D5] line-clamp-2">
+                  Smoked Atlas cedarwood and active bamboo charcoal for clarifying excess daily oils.
+                </p>
+              </div>
+            </div>
+            <div
+              class="px-5 py-4 flex items-center justify-between border-t border-[#E6DED2] dark:border-[#222222] mt-auto bg-[#F7F3EB]/40 dark:bg-[#111111]/60">
+              <span class="font-serif text-xl font-bold text-[#2D5A27] dark:text-[#7EB569]">$15.50</span>
+              <button type="button" class="btn-login btn-add-bag py-1.5 px-3.5 text-xs font-semibold"
+                data-soap="Cedar Charcoal Bar">
+                Add to Bag
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Generous Bottom Gap & Botanical Assurance Banner -->
+        <div
+          class="mt-14 pt-8 border-t border-[#E6DED2] dark:border-[#242424] flex flex-wrap items-center justify-between gap-4 text-xs font-medium text-[#384636] dark:text-[#D8E2D5]">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#568744]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Handmade in Small Batches • Naturally Cured for 42 Days</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#568744]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+            <span>Complimentary Botanical Gift Box on Orders Over $35</span>
+          </div>
+          <a href="products.html"
+            class="inline-flex items-center gap-1 font-bold text-[#2D5A27] dark:text-[#7EB569] hover:underline">
+            <span>Explore All 12 Skin Formulas</span>
+            <svg class="w-3.5 h-3.5 flip-in-rtl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: THE 6-WEEK CURING JOURNEY (Architectural Timeline & Process)
+         ====================================================================== -->
+    <section class="py-16 md:py-24 bg-white dark:bg-[#000000] border-b border-[#E6DED2] dark:border-[#222222]">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+          <!-- Visual: Curing Rack on Left -->
+          <div class="lg:col-span-5 relative">
+            <div class="img-zoom-wrapper border border-[#E6DED2] dark:border-[#282828] shadow-xl">
+              <img src="assets/images/sections/p10.jpg" alt="Artisan Soaps Curing on Cedar Racks"
+                class="img-zoom-target w-full h-[420px] object-cover">
+            </div>
+            <div
+              class="absolute -bottom-5 right-4 p-4 rounded-xl bg-[#FAF7F2] dark:bg-[#121212] border border-[#E6DED2] dark:border-[#242424] shadow-lg">
+              <span class="text-xs font-bold text-[#2D5A27] dark:text-[#7EB569] block">Patience Over Speed</span>
+              <span class="text-[11px] text-[#384636] dark:text-[#D8E2D5]">Preserving raw glycerin naturally</span>
+            </div>
+          </div>
+
+          <!-- Editorial Process Progression on Right -->
+          <div class="lg:col-span-7">
+            <span class="text-xs font-bold text-[#568744] dark:text-[#7EB569] uppercase tracking-widest block mb-2">
+              The Slow Method
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#1C241B] dark:text-[#FFFFFF] mb-6">
+              Why Real Cold-Process Soap Demands 42 Days
+            </h2>
+            <p class="text-sm sm:text-base text-[#384636] dark:text-[#D8E2D5] mb-8">
+              Commercial soaps use chemical detergents and flash-dry within minutes. At our studio, we practice
+              traditional saponification that retains all natural plant glycerin.
+            </p>
+
+            <div class="space-y-6">
+              <!-- Step 1 -->
+              <div class="flex items-start gap-4">
+                <span
+                  class="w-8 h-8 rounded-full bg-[#EBF3E8] dark:bg-[#162514] text-[#2D5A27] dark:text-[#7EB569] font-bold text-sm flex items-center justify-center shrink-0">
+                  01
+                </span>
+                <div>
+                  <h3 class="font-serif text-lg font-bold text-[#1C241B] dark:text-[#FFFFFF]">Botanical Infusion & Lye
+                    Blend</h3>
+                  <p class="text-xs sm:text-sm text-[#384636] dark:text-[#D8E2D5]">
+                    Raw unrefined oils and concentrated herb waters are mixed at room temperature to preserve fragile
+                    phytonutrients.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="flex items-start gap-4">
+                <span
+                  class="w-8 h-8 rounded-full bg-[#FAF3E8] dark:bg-[#281C10] text-[#D9822B] dark:text-[#F0A54E] font-bold text-sm flex items-center justify-center shrink-0">
+                  02
+                </span>
+                <div>
+                  <h3 class="font-serif text-lg font-bold text-[#1C241B] dark:text-[#FFFFFF]">Hand-Pouring & Mold
+                    Insulating</h3>
+                  <p class="text-xs sm:text-sm text-[#384636] dark:text-[#D8E2D5]">
+                    The soap emulsion is hand-poured into lined wood molds, kept warm under cotton blankets for 48
+                    hours.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="flex items-start gap-4">
+                <span
+                  class="w-8 h-8 rounded-full bg-[#F3EBF7] dark:bg-[#23172B] text-[#7C5C99] dark:text-[#A583C6] font-bold text-sm flex items-center justify-center shrink-0">
+                  03
+                </span>
+                <div>
+                  <h3 class="font-serif text-lg font-bold text-[#1C241B] dark:text-[#FFFFFF]">Piano Wire Slicing & Hand
+                    Stamping</h3>
+                  <p class="text-xs sm:text-sm text-[#384636] dark:text-[#D8E2D5]">
+                    Blocks are trimmed and sliced using tensioned wire, individually stamped with our studio seal.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="flex items-start gap-4">
+                <span
+                  class="w-8 h-8 rounded-full bg-[#EBF3E8] dark:bg-[#162514] text-[#2D5A27] dark:text-[#7EB569] font-bold text-sm flex items-center justify-center shrink-0">
+                  04
+                </span>
+                <div>
+                  <h3 class="font-serif text-lg font-bold text-[#1C241B] dark:text-[#FFFFFF]">6-Week Cedarwood Rack
+                    Curing</h3>
+                  <p class="text-xs sm:text-sm text-[#384636] dark:text-[#D8E2D5]">
+                    Bars rest in our humidity-controlled curing room for 6 weeks, developing a long-lasting, ultra-mild
+                    density.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: ARTISAN STUDIO & HANDS-ON WORKSHOPS EXPERIENCE
+         ====================================================================== -->
+    <section class="py-16 md:py-24 bg-[#FAF7F2] dark:bg-[#0A0A0A] border-b border-[#E6DED2] dark:border-[#222222]">
+      <div class="container-custom">
+        <div
+          class="rounded-3xl bg-white dark:bg-[#000000] border border-[#E6DED2] dark:border-[#242424] overflow-hidden p-6 sm:p-10 lg:p-12 shadow-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+            <div class="lg:col-span-7">
+              <span class="text-xs font-bold text-[#568744] dark:text-[#7EB569] uppercase tracking-widest block mb-2">
+                Interactive Workshops
+              </span>
+              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#1C241B] dark:text-[#FFFFFF] mb-4">
+                Craft Your Own Custom Botanical Batch
+              </h2>
+              <p class="text-sm sm:text-base text-[#384636] dark:text-[#D8E2D5] leading-relaxed mb-6">
+                Step into our sunlit apothecary studio. Under master soapmaker supervision, you will formulate organic
+                oils, blend essential oils, hand-pour your loaf, and take home 6 cured soap bars.
+              </p>
+
+              <!-- Workshop Highlights List -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                <div class="flex items-center gap-2.5">
+                  <div
+                    class="w-5 h-5 rounded-full bg-[#EBF3E8] dark:bg-[#162514] flex items-center justify-center text-[#2D5A27] dark:text-[#7EB569]">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span class="text-xs sm:text-sm font-medium text-[#1C241B] dark:text-[#FFFFFF]">Small Groups (Max 8
+                    makers)</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <div
+                    class="w-5 h-5 rounded-full bg-[#EBF3E8] dark:bg-[#162514] flex items-center justify-center text-[#2D5A27] dark:text-[#7EB569]">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span class="text-xs sm:text-sm font-medium text-[#1C241B] dark:text-[#FFFFFF]">All Botanicals & Molds
+                    Included</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <div
+                    class="w-5 h-5 rounded-full bg-[#EBF3E8] dark:bg-[#162514] flex items-center justify-center text-[#2D5A27] dark:text-[#7EB569]">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span class="text-xs sm:text-sm font-medium text-[#1C241B] dark:text-[#FFFFFF]">Take Home 6
+                    Handcrafted Bars</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <div
+                    class="w-5 h-5 rounded-full bg-[#EBF3E8] dark:bg-[#162514] flex items-center justify-center text-[#2D5A27] dark:text-[#7EB569]">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span class="text-xs sm:text-sm font-medium text-[#1C241B] dark:text-[#FFFFFF]">Artisan Certificate &
+                    Recipe Guide</span>
+                </div>
+              </div>
+
+              <!-- Call to Action -->
+              <div class="flex flex-wrap items-center gap-4">
+                <a href="workshops.html" class="btn-login py-3 px-6 text-sm font-semibold">
+                  <span>View Upcoming Workshop Dates</span>
+                  <svg class="w-4 h-4 flip-in-rtl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+                <span class="text-xs text-[#384636] dark:text-[#D8E2D5]">Every Saturday & Sunday • Morning /
+                  Afternoon</span>
+              </div>
+            </div>
+
+            <!-- Workshop Photograph -->
+            <div class="lg:col-span-5">
+              <div class="img-zoom-wrapper border border-[#E6DED2] dark:border-[#282828] shadow-lg">
+                <img src="assets/images/sections/p11.jpg" alt="Artisan Soap Making Workshop Session"
+                  class="img-zoom-target w-full h-[320px] sm:h-[380px] object-cover">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: STUDIO VISIT & BESPOKE SOAP BATCH CTA (Mandatory CTA Section)
+         ====================================================================== -->
+    <section class="relative py-20 md:py-28 overflow-hidden bg-[#1E3F1A] dark:bg-[#000000] text-white">
+      <!-- Background Image with Contrast Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="assets/images/sections/botanical-cta-bg.jpg" alt="Studio Botanical Atmosphere"
+          class="w-full h-full object-cover opacity-25">
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-[#142A11] via-[#1E3F1A]/90 to-[#142A11] dark:from-black dark:via-black/95 dark:to-black">
+        </div>
+      </div>
+
+      <div class="container-custom relative z-10 text-center max-w-3xl mx-auto">
+        <span
+          class="inline-block px-3 py-1 rounded-full bg-white/10 text-emerald-200 text-xs font-semibold tracking-wider uppercase mb-4 backdrop-blur-sm border border-white/20">
+          Custom Apothecary Orders & Visits
+        </span>
+
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
+          Commission a Bespoke Herbal Batch for Weddings & Gatherings
+        </h2>
+
+        <p class="text-base sm:text-lg text-emerald-100/90 font-normal leading-relaxed mb-8">
+          Personalized botanical recipes, custom botanical stamp engraving, and eco-linen wrapping for special
+          celebrations or boutique accommodations.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="contact.html"
+            class="inline-flex items-center gap-2 py-3.5 px-8 text-sm font-bold rounded-full bg-[#E5A93C] hover:bg-[#D9822B] text-[#1C241B] transition-transform hover:-translate-y-0.5 shadow-lg">
+            <span>Enquire for Bespoke Batch</span>
+            <svg class="w-4 h-4 flip-in-rtl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+
+          <a href="about.html"
+            class="inline-flex items-center gap-2 py-3.5 px-7 text-sm font-semibold rounded-full border border-white/30 hover:border-white text-white hover:bg-white/10 transition-colors">
+            <span>Discover Our Story</span>
+          </a>
+        </div>
+
+        <p class="mt-8 text-xs text-emerald-200/80">
+          Studio visits available Tuesday through Saturday • Walk-ins welcome for bar testing
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL: SHARED FOOTER SYSTEM
+       ======================================================================== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div>
+          <a href="index.html" class="brand-link mb-3">
+            <img src="assets/images/logo/logo.png" alt="Herbal Soap Making Studio Logo" class="brand-logo-img">
+            <div class="brand-text-block">
+              <span class="brand-title">Herbal Studio</span>
+              <span class="brand-subtitle">Artisanal Botanical</span>
+            </div>
+          </a>
+          <p class="footer-brand-bio">
+            Crafting pure, organic cold-process herbal soaps infused with wild-harvested herbs, nourishing plant oils,
+            and steam-distilled essential essences.
+          </p>
+        </div>
+
+        <!-- Quick Navigation Links -->
+        <div>
+          <h3 class="footer-heading">Studio Navigation</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 (Studio)</a></li>
+            <li><a href="home-2.html">Home 2 (Apothecary)</a></li>
+            <li><a href="products.html">Soap Collections</a></li>
+            <li><a href="workshops.html">Hands-on Workshops</a></li>
+            <li><a href="about.html">Botanical Story</a></li>
+            <li><a href="contact.html">Contact & Visits</a></li>
+          </ul>
+        </div>
+
+        <!-- Botanical Skin Solutions -->
+        <div>
+          <h3 class="footer-heading">Skin Formulations</h3>
+          <ul class="footer-links-list">
+            <li><a href="products.html#sensitive">Dry & Sensitive Skin</a></li>
+            <li><a href="products.html#oily">Oily & Clarifying Charcoal</a></li>
+            <li><a href="products.html#calming">Chamomile Calming Bar</a></li>
+            <li><a href="products.html#lavender">Wild Lavender Exfoliant</a></li>
+            <li><a href="products.html#custom">Bespoke Batch Crafting</a></li>
+          </ul>
+        </div>
+
+        <!-- Studio Hours & Newsletter -->
+        <div>
+          <h3 class="footer-heading">Studio Newsletter</h3>
+          <p class="footer-newsletter-text">
+            Receive seasonal batch releases, workshop schedule updates, and botanical skincare wisdom.
+          </p>
+          <form class="footer-newsletter-form" action="#" method="POST">
+            <input type="email" class="footer-newsletter-input" placeholder="Your email address" required>
+            <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+          </form>
+          <div class="mt-4 text-xs text-[#384636] dark:text-[#D8E2D5]">
+            <p><strong>Studio Hours:</strong> Monday – Saturday: 9:00 AM – 6:00 PM</p>
+            <p><strong>Location:</strong> 42 Botanical Gardens Way, Artisan Quarter</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          <p>© 2026 Herbal Soap Making Studio. All Rights Reserved. Pure Handcrafted Botanical Skincare.</p>
+        </div>
+        <div class="footer-badges">
+          <div class="badge-item">
+            <svg class="w-4 h-4 text-[#568744]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>100% Plant-Based</span>
+          </div>
+          <div class="badge-item">
+            <svg class="w-4 h-4 text-[#568744]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Cold-Process Aged</span>
+          </div>
+          <div class="badge-item">
+            <svg class="w-4 h-4 text-[#568744]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Cruelty Free</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       GLOBAL: SCROLL TO TOP BUTTON
+       ======================================================================== -->
+  <button type="button" id="scroll-to-top" aria-label="Scroll to top of page" title="Scroll to top">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- External JavaScript ONLY (No inline scripts) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
