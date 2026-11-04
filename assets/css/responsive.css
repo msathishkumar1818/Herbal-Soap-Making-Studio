@@ -8,28 +8,28 @@
 /* Compact header responsive behavior */
 @media (max-width: 1079px) {
   .site-header {
-    height: 64px;
+    height: 68px;
   }
   
   :root {
-    --header-height: 64px;
+    --header-height: 68px;
   }
 
   body {
-    padding-top: 64px;
+    padding-top: 68px;
   }
 
   .brand-logo-img {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
 
   .brand-title {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
 
   .brand-subtitle {
-    font-size: 0.625rem;
+    font-size: 0.65rem;
   }
 
   .desktop-nav {
@@ -49,8 +49,13 @@
 
 /* Extra small screens (iPhone SE, 320px - 375px) */
 @media (max-width: 375px) {
+  .brand-logo-img {
+    width: 44px;
+    height: 44px;
+  }
+
   .brand-title {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .brand-subtitle {
