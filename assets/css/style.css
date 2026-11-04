@@ -28,7 +28,7 @@
   --color-accent-sage: #568744;
   --color-accent-lavender: #7C5C99;
   --color-accent-amber: #D9822B;
-  --header-height: 76px;
+  --header-height: 82px;
 }
 
 /* --------------------------------------------------------------------------
@@ -212,15 +212,15 @@ html.dark .site-header {
 }
 
 .brand-logo-img {
-  width: 58px;
-  height: 58px;
+  height: 62px;
+  width: auto;
+  max-width: 95px;
   object-fit: contain;
-  border-radius: 50%;
   transition: transform 0.3s ease;
 }
 
 .brand-link:hover .brand-logo-img {
-  transform: scale(1.06) rotate(2deg);
+  transform: scale(1.05);
 }
 
 .brand-text-block {
@@ -581,10 +581,10 @@ html.dark .btn-icon-control:hover {
 }
 
 .mobile-brand-box img {
-  width: 48px;
-  height: 48px;
+  height: 52px;
+  width: auto;
+  max-width: 80px;
   object-fit: contain;
-  border-radius: 50%;
 }
 
 .mobile-drawer-body {
@@ -976,8 +976,9 @@ html.dark .site-footer {
 }
 
 .site-footer .brand-logo-img {
-  width: 60px;
-  height: 60px;
+  height: 72px;
+  width: auto;
+  max-width: 110px;
 }
 
 .footer-brand-bio {

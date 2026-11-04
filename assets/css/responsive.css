@@ -8,20 +8,21 @@
 /* Compact header responsive behavior */
 @media (max-width: 1079px) {
   .site-header {
-    height: 68px;
+    height: 72px;
   }
   
   :root {
-    --header-height: 68px;
+    --header-height: 72px;
   }
 
   body {
-    padding-top: 68px;
+    padding-top: 72px;
   }
 
   .brand-logo-img {
-    width: 48px;
-    height: 48px;
+    height: 52px;
+    width: auto;
+    max-width: 82px;
   }
 
   .brand-title {
@@ -50,8 +51,9 @@
 /* Extra small screens (iPhone SE, 320px - 375px) */
 @media (max-width: 375px) {
   .brand-logo-img {
-    width: 44px;
-    height: 44px;
+    height: 46px;
+    width: auto;
+    max-width: 72px;
   }
 
   .brand-title {
